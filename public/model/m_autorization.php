@@ -12,10 +12,11 @@ if (isset($_POST['autorization-btn'])) {
 		$pass = $_POST['pass'] ?? '';
 		if (!empty($_POST['pass'])) {
 			$user = getUser($login) ?? '';
-			$user_t = getUser($login) ?? '';
-			if (!empty($user_t)) {
-				if ($user_t[0]['password'] == $pass) {
-					echo "<br> пароли совпадают";
+			if (!empty($user)) {
+				if ($user[0]['password'] == $pass) {
+					//echo "<br> пароли совпадают";
+					$_SESSION['user']['name'] = $user[0]['name'];
+					$_SESSION['user']['id_user'] = $user[0]['id_user'];
 					$isEntry = true;
 					$error = '';
 				} else {
@@ -32,4 +33,11 @@ if (isset($_POST['autorization-btn'])) {
 	}
 } else {
 	$error = "";
+	//addOldValue('login', $login);
+}
+
+if(!isset($_POST['save-info']))
+{
+	//header('Location: ?page=userApplication');
+	//exit();
 }

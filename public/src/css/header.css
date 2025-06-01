@@ -1,0 +1,156 @@
+.header {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	/*background-color: #494747	;*/
+	background-color: #554a4a;
+	align-items: end;
+	z-index: 1000;
+}
+.header span{
+	color: #c9bfbf;
+	position: absolute;
+	top: 45px;
+	left: 80px;
+}
+.logo {
+	padding-left: 10px;
+}
+
+.logo p {
+	font-size: 48px;
+	margin: 0;
+	color: rgb(177, 164, 164);
+	text-shadow: 3px 3px #5e5f60;
+}
+
+
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-left: 105px;
+}
+
+.item-menu {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	margin: 0 10px;
+	width: 180px;
+	border-radius: 5px;
+	border:solid 1px #c9bfbf;
+	color: #c9bfbf;
+	justify-content: center;
+	align-items: center;
+	height: 25px;
+	position: relative;
+	/* Добавлено для правильного позиционирования выпадающего меню */
+}
+.item-menu:hover{
+	border-color: #3de0e0;
+	color: #3de0e0;
+}
+.item-menu p {
+	margin: 0;
+	text-align: center;
+}
+
+.item-menu img {
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+}
+
+.dropdown {
+	position: relative;
+
+}
+
+.menu-item {
+	cursor: pointer;
+	/* Указатель при наведении */
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+}
+.menu-item img{
+	width: 25px;
+	height: 25px;
+}
+
+.menu-item p {
+	padding: 10px;
+
+}
+
+.sub-item {
+	cursor: default;
+	/* Указатель при наведении */
+	opacity: 0;
+	/* Начальное состояние */
+	max-height: 0;
+	/* Начальная высота */
+	overflow: hidden;
+	/* Скрываем переполнение */
+	transition: opacity 0.7s ease, max-height 0.7s ease;
+	/* Плавные переходы */
+	position: absolute;
+	padding: 10px 20px;
+	margin: -5px;
+	top: 51px;
+	background-color: rgba(73, 72, 72, 0.8);
+	color: white;
+	border-radius: 5px;
+	width: 170px;
+
+}
+
+.sub-item.show {
+	opacity: 1;
+	/* Полная видимость */
+	max-height: 500px;
+	/* Устанавливаем максимальную высоту для показа */
+}
+
+.sub-sub-item {
+
+	display: none;
+	/* Скрываем подпункты изначально */
+	transition-duration: 0.8s;
+	color: rgb(137, 135, 132);
+}
+
+
+
+/* Показываем подменю при наведении на главный пункт */
+.menu-item:hover+.sub-item {
+	display: block;
+	opacity: 1;
+	/* Полная видимость */
+	max-height: 500px;
+	/* Устанавливаем максимальную высоту для показа */
+
+}
+
+/* Показываем подпункты при наведении на пункт */
+.item:hover .sub-sub-item {
+	display: block;
+}
+
+.sub-item:hover {
+	opacity: 1;
+	/* Полная видимость */
+	max-height: 500px;
+	/* Устанавливаем максимальную высоту для показа */
+
+}

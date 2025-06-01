@@ -2,9 +2,9 @@
 
 if(!isset($_SESSION)){
     session_start();
-    $_SESSION['user'] = [];
-    $_SESSION['user']['login'] = '';
-    $_SESSION['user']['password'] = '';
+    //$_SESSION['user'] = [];
+    //$_SESSION['user']['login'] = '';
+    //$_SESSION['user']['password'] = '';
 }
 /**
  *      echo "</br> post= ";
@@ -56,11 +56,9 @@ function extractFields(array $target, array $fields): array
 	$res = [];
 
 	foreach ($fields as $field) {
-		if($_POST['message']){
-			$res[$field] = trim($target[$field]);
-		}else{
+		
 		$res[$field] = trim(htmlspecialchars($target[$field]));
-		}
+		
 	}
 	return $res;
 }

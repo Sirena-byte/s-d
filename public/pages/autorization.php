@@ -27,5 +27,9 @@ if (empty($_POST) || ($isEntry == false)): ?>
 		</div>
 	</div>
 <?php else : ?>
-<p><?=$user[0]['name'] ?></p>
+	<?php require_once("template/header.php"); ?>
+	<div class="content">
+		<p><?=$user[0]['name'] ?></p>
+	</div>
+
 <?php endif;  ?>

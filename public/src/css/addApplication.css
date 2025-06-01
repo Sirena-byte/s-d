@@ -1,0 +1,173 @@
+.content-application {
+	display: flex;
+	min-height: 100%;
+	background-color: rgb(211, 207, 201);
+}
+
+.application {
+	flex-grow: 1;
+}
+
+.form-app {
+	display: flex;
+	justify-content: space-between;
+	min-height: 100%;
+}
+
+.aplication-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.content-title {
+flex-shrink: 0;
+	padding: 5px;
+	margin: 5px;
+}
+
+.content-title input {
+	border: 1px solid #554a4a;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.app-input {
+	background-color: #c9bfbf;
+	padding: 10px;
+	width: 100%;
+	border-radius: 5px;
+	border: none;
+}
+
+.content-file {
+	flex-shrink: 0;
+	background-color: #554a4a;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 0 10px;
+	border-radius: 5px;
+	height: 60px;
+
+}
+
+.content-message {
+	border: 1px solid #554a4a;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #c9bfbf;
+	max-height: 360px;
+	flex-grow: 1;
+	overflow-y:auto;
+}
+::-webkit-scrollbar{
+	background-color: #e1dede;
+	width: 8px;
+}
+::-webkit-scrollbar-thumb{
+	cursor: pointer;
+	border: 1px solid #554a4a;
+	background-color: #554a4a;
+	border-radius: 1px;
+}
+.content-button {
+	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.placeholder {}
+
+.application-conf {
+	background-color: #c9bfbf;
+	border: 1px solid #554a4a;
+	border-radius: 5px;
+	width: 20%;
+	margin: 10px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.conf-app {
+	border: 1px solid #554a4a;
+	min-height: 30%;
+	border-radius: 5px;
+	padding: 10px;
+}
+.conf-inition {
+	border: 1px solid #554a4a;
+	min-height: 30%;
+	border-radius: 5px;
+	padding: 10px;
+}
+.conf-executer {
+	border: 1px solid #554a4a;
+	min-height: 29%;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+
+#fileInfo {
+	color: #c9bfbf;
+}
+
+#customFileButton {
+	border: 1px solid #c9bfbf;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin: 0 20px;
+}
+
+#customFileButton:hover {
+	border: solid 1px #3de0e0;
+	color: #3de0e0;
+}
+
+#removeFileButton {
+	border: 1px solid #c9bfbf;
+	color: #c9bfbf;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+#removeFileButton:hover {
+	border: 1px solid #f02472;
+	color: #f02472;
+}
+
+.content-btn {
+	
+	padding: 10px;
+	margin: 10px;
+	background-color: #554a4a;
+	height: 40px;
+	display: flex;
+	justify-content: end;
+	align-self: center;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.save-btn {
+	margin: auto 10px;
+
+}
+
+ .info-block{
+	    width: 400px;
+    height: 100px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #554a4a;
+ }

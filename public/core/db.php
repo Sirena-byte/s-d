@@ -112,7 +112,7 @@ function dbCheckError(PDOStatement $query): bool
         // FILE_APPEND - указывает, что новое сообщение будет добавлено в конец файла
         file_put_contents('error_log.txt', $errorMessage, FILE_APPEND);
         // Выводим общее сообщение для пользователя, чтобы не раскрывать детали ошибки
-        echo "<p class=\"errorDB\">\"Произошла ошибка. Пожалуйста, проверьте журнал ошибок.\"</p>";
+       // echo "<p class=\"errorDB\">\"Произошла ошибка. Пожалуйста, проверьте журнал ошибок.\"</p>";
         exit();
     }
     return true;
