@@ -1,0 +1,50 @@
+.content-application {
+	padding-top: 2px;
+}
+.application {
+	position: relative;
+	padding-top: 80px;
+	background-color: #c9bfbf;
+}
+
+form#messageForm{
+	width: 90%;
+	padding: 10px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+.form-app {
+}
+.application-content {
+}
+.content-title {
+	display: flex;
+	font-size: 20px;
+}
+.app-input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px;
+}
+.content-message{
+	display: flex;
+}
+.content-message textarea{
+	width: 100%;
+	min-height: 400px;
+	padding: 10px;
+	margin: 10px;
+}
+.content-file {
+	margin:5px 10px;
+}
+.content-button {
+}
+.content-btn {
+	display: flex;
+	justify-content: center;
+}
+
+.save-btn button{
+	margin: 0 auto;
+}

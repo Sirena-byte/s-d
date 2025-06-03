@@ -123,10 +123,11 @@
 .reject-btn {}
 
 .block-message{
-	background-color: #c9bfbf;
+	background-color: #f8d9d9;
 	padding: 10px;
 	margin: 10px;
-	width: 85%;
+
+	border-radius: 5px;
 }
 
 .info-mesage-user{
@@ -137,6 +138,12 @@
 	text-align: left;
 }
 .init-user{
-	background-color: #f8d9d9;
+	
+	background-color: #c9bfbf;
 margin-left: 13%;
+}
+
+img{
+	    overflow: hidden;
+    width: -webkit-fill-available;
 }

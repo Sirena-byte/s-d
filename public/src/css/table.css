@@ -1,0 +1,23 @@
+table {
+	width: 100%;
+	border-top: 7px solid #9e9c9c;
+	border-collapse: collapse;
+	text-align: center;
+	margin-bottom: 20px;
+	border: 1px solid #9e9c9c;
+}
+
+td {
+	text-align: left;
+	padding: 7px;
+	border: 1px solid #9e9c9c;
+}
+tr:hover{
+	background-color: #fff;
+}
+
+th {
+	text-align: center;
+	padding: 7px;
+	border: 1px solid #9e9c9c;
+}

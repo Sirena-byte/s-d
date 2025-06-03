@@ -1,7 +1,15 @@
 	<?php
     require_once("template/header.php");
     ?>
-	
+	<head>
+	<link rel="stylesheet" type="text/css" href="src/css/table.css">
+		<link rel="stylesheet" type="text/css" href="src/css/allstyle.css">
+		<link rel="stylesheet" type="text/css" href="src/css/style.css">
+		<link rel="stylesheet" type="text/css" href="src/css/style.css">
+		<link rel="stylesheet" type="text/css" href="src/css/addApp.css">
+		<link rel="stylesheet" type="text/css" href="src/css/forms.css">
+		
+	</head>
 	<?php
     if (isset($_POST['save-btn'])) : ?>
         <?php require_once("model/m_addApp.php"); ?>
@@ -37,8 +45,3 @@
 	<div class=""><?= $id ?? ''; ?></div>
 	<div class="footer"></div>
 	</div>
-	<style>
-	    .content-application {
-	        padding-top: 200px;
-	    }
-	</style>

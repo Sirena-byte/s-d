@@ -37,16 +37,7 @@
 							<div class="image"><img src="src/files/<?= $application[0]['file'] ?>" alt=""></div>
 						</div>
 					</div>
-					<div class="info">
-						<?php //print_r($_POST)?>
-						<?php //print_r($dataLink['id_app']) ?>
-						<?php //print_r($statusApp) ?>
-						<?php //print_r($_SESSION['user']['name']) ?>
-						<?php //print_r($currentUser[0]) ?>
-						<?php //print_r($userInit) ?>
-						<?php print_r($executerUserId) ?>
-						<?php //print_r($dataLink) ?>
-					</div>
+					
 					<div class="message-all">
 						<?php if (!empty($messages)) : ?>
 							<?php foreach ($messages as $message) : ?>
@@ -128,6 +119,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="info">
+						<?php //print_r($_POST)?>
+						<?php //print_r($dataLink['id_app']) ?>
+						<?php //print_r($statusApp) ?>
+						<?php //print_r($_SESSION['user']['name']) ?>
+						<?php //print_r($currentUser[0]) ?>
+						<?php //print_r($userInit) ?>
+						<?php print_r($executerUserId) ?>
+						<?php //print_r($dataLink) ?>
+					</div>
 	</div>
 
 	<?php if ($statusApp[0]['id_status'] == 1) : ?>

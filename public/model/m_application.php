@@ -6,7 +6,7 @@ if ($_GET['id'] !== '') {
 	$application = getApplicationOnId((int)$_GET['id']) ?? '';
 	$statusApp = getStatusApp($_GET['id']) ?? '';
 	$messages = getMessagesOnIdApp($_GET['id']);
-	$currentUser = getUseronID($_SESSION['user']['id_user']);
+	$currentUser = getUseronID($_SESSION['user']['id_user'] ?? '');
 	$initUserId = getIDUserLinkApp($idCurrentApp, 1) ?? '';
 	$executerUserId = getIDUserLinkApp($idCurrentApp,  '2') ?? '';
 	//print_r($application);

@@ -1,0 +1,252 @@
+.addata {
+
+	background-color: #c9bfbf;
+	padding: 30px;
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	/* text-align: center; */
+	box-shadow: 5px 5px 5px rgb(177, 164, 164);
+}
+
+.addata h3,
+h4 {
+	text-align: center;
+}
+
+.addemployee {
+	height: 530px;
+}
+
+.form-content {
+	margin: 0 30px;
+}
+
+.form-content input {
+	display: block;
+	margin: 15px auto;
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.content-checkbox {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px 0;
+}
+
+.addata form {
+	display: block;
+	align-items: center;
+	padding: 30px;
+}
+
+.addata button {
+	width: 80%;
+	border-radius: 5px;
+	transition: 0.3s;
+	font-size: 15px;
+/*
+ 	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	*/
+}
+
+.addemployee input {
+	margin: 10px auto;
+}
+
+.addemployee form {
+	padding: 15px;
+}
+
+.addemployee select {
+	width: 50%;
+}
+
+.addemployee button {
+	margin-top: 20px;
+
+}
+.addemployee button:hover{
+		
+}
+
+.content-checkbox select {
+	width: 80%;
+	height: 36px;
+	border-radius: 5px;
+
+}
+
+.form {
+	padding: 5px;
+	background-color: #fdf9f9;
+	border-radius: 5px;
+}
+
+.addata button:hover {
+
+	transition: 0.3s;
+}
+
+.error {
+	color: rgb(239, 178, 178);
+	font-size: 0px;
+}
+
+.test {
+	margin-top: 50px;
+}
+
+.checkbox {
+	display: flex;
+	margin: 10px;
+}
+
+.checkbox label {
+	width: 45%;
+}
+.edit-checkbox label{
+	width: 60%;
+}
+.checkbox input {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	box-shadow: none;
+}
+
+/* Стиль для модального окна */
+.modal {
+	text-align: center;
+	color: #fff;
+	display: none;
+	/* Скрыто по умолчанию */
+	position: fixed;
+	/* Открывается поверх всего */
+	z-index: 1;
+	/* Поверх других элементов */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Ширина экрана */
+	height: 100%;
+	/* Высота экрана */
+	background-color: rgba(0, 0, 0, 0.7);
+	/* Полупрозрачный фон */
+}
+
+.modal input,
+.modal select {
+	width: 80%;
+	height: 30px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.modal button {
+	margin-top: 10px;
+	width: 150px;
+	height: 35px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #907a7a;
+	box-shadow: 5px 5px 5px rgb(78, 75, 75);
+	transition: 0.3s;
+	cursor: pointer;
+	/* Указатель при наведении */
+}
+
+.modal button:hover {
+	background-color: #5f5858;
+	transition: 0.3s;
+}
+
+.modal-content {
+	background-color: #a89b9b;
+	/* фон для содержимого */
+	margin: 10px auto;
+	/* Центрирование по вертикали */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+	/* Ширина модального окна */
+}
+
+.close {
+	color: #161515;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	/* Цвет при наведении */
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* edit data */
+.editUser {
+	min-height: 410px;
+	position: fixed;
+	top: 60px;
+	right: 0;
+	height: 100%;
+	
+	/* display: none; */
+}
+.editUser h3{
+	text-align: center;
+	padding: 15px;
+}
+.editUser button{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+.block-content{
+	width: 70%;
+}
+.admin_panel {
+	display: flex;
+}
+.admin_panel button{
+	margin: 10px;
+}
+
+.admin_panel button:hover{
+	
+
+}
+
+
+.admin_panel .cancel-btn a:hover{
+	color: #e52997;
+}
+.cancel-btn:hover{
+	border: 1px solid #e52997;
+}
+
+.err {
+	margin-top: 15px;
+	color:#5e5959;
+	font-size: 20px;
+	bottom: 20px;
+	text-align: center;
+	background-color: rgb(239, 178, 178);
+	border-radius: 5px;
+}
+.edit-user-form{
+	display: flex;
+}

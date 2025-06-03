@@ -82,8 +82,10 @@ min-width: 100px;
 .edit-column{
 	max-width: 30px; /* Фиксированная ширина для колонки Редактирование */
 }
-.edit-sell{
+.edit-sell button{
 	width: 30px;
+	font-size: 0;
+	background:none;
 }
 .admin-btn img{
 	width: 20px;

@@ -16,16 +16,11 @@ require_once('model/m_autorization.php'); ?>
 			<ul class="sub-item">
 				<li class="item">Пользователи
 					<ul class="sub-sub-item">
-						<li><a href="#">Список</a></li>
-						<li><a href="#" class="">Создать</a></li>
+						<li><a href="?page=allUsers">Список</a></li>
+						<li><a href="?page=addUser" class="">Создать</a></li>
 					</ul>
 				</li>
-				<li class="item">Организации
-					<ul class="sub-sub-item">
-						<li><a href="#">Список</a></li>
-						<li><a href="#">Создать</a></li>
-					</ul>
-				</li>
+				
 			</ul>
 		</li>
 		<li class="item-menu dropdown">
@@ -94,7 +89,7 @@ require_once('model/m_autorization.php'); ?>
 				</p>
 			</div>
 			<ul class="sub-item">
-				<li class="item"><a href="#">Выйти</a></li>
+				<li class="item"><a href="?page=autorization">Выйти</a></li>
 				<li class="item">Настройки</li>
 			</ul>
 		</li>
