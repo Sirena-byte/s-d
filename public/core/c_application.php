@@ -58,6 +58,15 @@ function getUseronID($id)
 	$query = dbQuery($sql, [':id' => $id]);
 	return $query->fetchAll();
 }
+
+//получить ид инициатора заявки 
+function getIdInitionApp($id_app)
+{
+	$sql = "SELECT id_user FROM `application_user` WHERE id_user_status = 1 AND id_app = :id";
+	$query = dbQuery($sql, [':id' => $id_app]);
+	return $query->fetchAll();
+
+}
 //получить id пользователя, связанного с заявкой
 function getIDUserLinkApp($id_app, $id_user_status)
 {
@@ -105,8 +114,9 @@ function handleRequestAddLinkToApp($err, $data)
 }
 
 function changeStatusApp($app){
-    $sql = "UPDATE `application` SET `id_status`='2' WHERE id_app = :id_app";
+    $sql = "UPDATE `application` SET `id_status`= :id_status WHERE id_app = :id_app";
     
     $app = dbQueryEdit($sql ,$app);
     return true;
 }
+

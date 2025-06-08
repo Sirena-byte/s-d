@@ -9,6 +9,7 @@ if ($_GET['id'] !== '') {
 	$currentUser = getUseronID($_SESSION['user']['id_user'] ?? '');
 	$initUserId = getIDUserLinkApp($idCurrentApp, 1) ?? '';
 	$executerUserId = getIDUserLinkApp($idCurrentApp,  '2') ?? '';
+	$idInitApp = getIdInitionApp($idCurrentApp) ?? '';
 	//print_r($application);
 } else {
 	echo "no id";
@@ -36,11 +37,29 @@ if (isset($_POST)) {
 
 if (isset($_POST)) {
 	if (isset($_POST['close_app'])) {
-		echo "закрываем заявку";
+		$dataAppClose['id_status'] = 4;
+		$dataAppClose['id_app'] = $idCurrentApp;
+		changeStatusApp($dataAppClose);
+		$path = "Location: ?page=application&id=" . $idCurrentApp;
+		header($path);
+		exit();
 	}
-	if (isset($_POST['link_app'])) {
-		//если текущий пользоователь админ 
-		//echo "привязать заявку";
+
+	if (isset($_POST['approve'])) {
+		$dataApp['id_status'] = 3;
+		$dataApp['id_app'] = $idCurrentApp;
+		changeStatusApp($dataApp);
+		$path = "Location: ?page=application&id=" . $idCurrentApp;
+		header($path);
+		exit();
+	}
+	if (isset($_POST['reject'])) {
+		$dataAppReject['id_status'] = 2;
+		$dataAppReject['id_app'] = $idCurrentApp;
+		changeStatusApp($dataAppReject);
+		$path = "Location: ?page=application&id=" . $idCurrentApp;
+		header($path);
+		exit();
 	}
 }
 
@@ -64,6 +83,5 @@ if (!empty($_POST['link_app'])) {
 	header($path);
 	exit();
 } else {
-	echo "кнопка не нажата";
+	//echo "кнопка не нажата";
 }
-

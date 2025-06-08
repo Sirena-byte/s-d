@@ -1,4 +1,3 @@
-
 <?php
 ob_start(); // Начинаем буферизацию вывода
 require_once('model/m_autorization.php'); ?>
@@ -8,21 +7,23 @@ require_once('model/m_autorization.php'); ?>
 		<span>support</span>
 	</div>
 	<ul class="menu">
-		<li class="item-menu dropdown">
-			<div class="menu-item">
-				<img src="src/icon/settings.png" alt="">
-				<p>Администрирование</p>
-			</div>
-			<ul class="sub-item">
-				<li class="item">Пользователи
-					<ul class="sub-sub-item">
-						<li><a href="?page=allUsers">Список</a></li>
-						<li><a href="?page=addUser" class="">Создать</a></li>
-					</ul>
-				</li>
-				
-			</ul>
-		</li>
+		<?php if ($_SESSION['user']['isAdmin'] == 1) : ?>
+			<li class="item-menu dropdown">
+				<div class="menu-item">
+					<img src="src/icon/settings.png" alt="">
+					<p>Администрирование</p>
+				</div>
+				<ul class="sub-item">
+					<li class="item">Пользователи
+						<ul class="sub-sub-item">
+							<li><a href="?page=allUsers">Список</a></li>
+							<li><a href="?page=addUser" class="">Создать</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</li>
+		<?php endif; ?>
 		<li class="item-menu dropdown">
 			<div class="menu-item">
 				<img src="src/icon/support2.png" alt="">
@@ -31,9 +32,14 @@ require_once('model/m_autorization.php'); ?>
 			<ul class="sub-item">
 				<li class="item">Заявки
 					<ul class="sub-sub-item">
-						<li><a href="#">Список</a></li>
-						<li><a href="?page=addApp">Создать</a></li>
-						<li><a href="?page=application&id="<?php echo (int)$_GET['id'] ?? '';?>>Текущая заявка</a></li>
+						<?php if ($_SESSION['user']['isAdmin'] == 1) : ?>
+							<li><a href="?page=allApp">Все заявки</a></li>
+							<li><a href="?page=allApp">Статистика</a></li>
+							<?php endif; ?>
+						<?php if($_SESSION['user']['isAdmin'] == 0) : ?>
+							<li><a href="?page=addApp">Создать</a></li>
+						<?php endif; ?>
+						
 					</ul>
 				</li>
 				<li class="item">пункт 2
@@ -95,4 +101,5 @@ require_once('model/m_autorization.php'); ?>
 		</li>
 	</ul>
 </div>
-<?php ob_end_flush(); // Отправляем буфер ?>
+<?php ob_end_flush(); // Отправляем буфер 
+?>

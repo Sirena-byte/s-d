@@ -37,7 +37,7 @@
 							<div class="image"><img src="src/files/<?= $application[0]['file'] ?>" alt=""></div>
 						</div>
 					</div>
-					
+
 					<div class="message-all">
 						<?php if (!empty($messages)) : ?>
 							<?php foreach ($messages as $message) : ?>
@@ -79,58 +79,55 @@
 							</fieldset>
 						</div>
 					<?php endif ?>
-					
-						<div class="conf-executor">
-							<div class="executor-info">
-								<?php if($app['status_user'] == 'Исполнитель заявки') :?>
+
+					<div class="conf-executor">
+						<div class="executor-info">
+							<?php if ($app['status_user'] == 'Исполнитель заявки') : ?>
 								<fieldset>
 									<legend style=" font-size:20px;">Исполнитель:</legend>
 									<p>Имя: <?= ($application[1]['user_name'] . " (email: " . $application[1]['email'] . ")") ?? '' ?></p>
 									<p>Место работы: <?= ($application[1]['organization'] . "/" . $application[1]['department'] . "/" . $application[1]['address']) ?? '' ?></p>
 									<p>Дата создания заявки: <?= ($application[1]['time_change']) ?? '' ?></p>
 								</fieldset>
-								<?php endif ?>
-								<?php endforeach ?>
-								<?php if ((int)$currentUser[0]['isAdmin'] == '1') : ?>
-									<div class="executor-btn">
-										<form method="post">
-											<?php if(empty($executerUserId)) : ?>
-												<button type="submit" name="link_app" value="link_app">Привязать себя к заявке</button>
-												<?php endif?>
-											<button type="submit" name="close_app" value="close_app">Закрыть заявку</button>
-										</form>
-									</div>
-								<?php endif ?>
+							<?php endif ?>
+						<?php endforeach ?>
+						<?php if ((int)$currentUser[0]['isAdmin'] == '1') : ?>
+							<div class="executor-btn">
+								<form method="post">
+									<?php if (empty($executerUserId)) : ?>
+										<button type="submit" name="link_app" value="link_app">Привязать себя к заявке</button>
+										
+									<?php endif ?>
+									<?php if($statusApp[0]['id_status'] == 3) :?>
+										<button type="submit" name="close_app" value="close_app">Закрыть заявку</button>
+										<?php endif ?>
+									<!-- -->
+								</form>
 							</div>
-
+						<?php endif ?>
 						</div>
-				
-				<div class="conf-button">
-					<form method="post">
-						<button type="submit" name="edd_message" value="add_message">Добавить сообщение</button>
-					</form>
 
-					<?php if ($application[0]['status_user'] == 'Инициатор заявки') : ?>
-						<div class="init-btn">
-							<button>Одобрить решение</button>
-							<button class="reject-btn">Отклонить решение</button>
-						</div>
-					<?php endif ?>
-				</div>
+					</div>
+
+					<div class="conf-button">
+						<form method="post">
+							<?php if($statusApp[0]['id_status'] != 4) :?>
+							<button type="submit" name="edd_message" value="add_message">Добавить сообщение</button>
+							<?php endif ?>
+						</form>
+
+						<?php if ((int)$idInitApp[0]['id_user'] == (int)$currentUser[0]['id_user']) : ?>
+							<div class="init-btn">
+								<form method="POST">
+									<button type="submit" name="approve" value="approve">Одобрить решение</button>
+									<button class="reject-btn" type="submit" name="reject" value="reject">Отклонить решение</button>
+								</form>
+							</div>
+						<?php endif ?>
+					</div>
 			</div>
 		</div>
-		<div class="info">
-						<?php //print_r($_POST)?>
-						<?php //print_r($dataLink['id_app']) ?>
-						<?php //print_r($statusApp) ?>
-						<?php //print_r($_SESSION['user']['name']) ?>
-						<?php //print_r($currentUser[0]) ?>
-						<?php //print_r($userInit) ?>
-						<?php print_r($executerUserId) ?>
-						<?php //print_r($dataLink) ?>
-					</div>
-	</div>
-
+		
 	<?php if ($statusApp[0]['id_status'] == 1) : ?>
 		<style>
 			.status {
@@ -138,3 +135,25 @@
 			}
 		</style>
 	<?php endif ?>
+	<!--<div class="info">
+			<?php //print_r($_POST) ?>
+			<?php //print_r($dataLink['id_app']) 
+			?>
+			<?php //print_r($statusApp) 
+			?>
+			<?php //print_r($_SESSION['user']['name']) 
+			?>
+			<?php //print_r($currentUser[0]) 
+			?>
+			<?php //print_r($userInit) 
+			?>
+			<?php //print_r($executerUserId) 
+			?>
+			<?php //print_r($dataLink) 
+			?>
+			<?php //print_r((int)$idInitApp[0]['id_user']) 
+			?>
+			<?php //print_r((int)$currentUser[0]['id_user']) 
+			?>
+		</div>
+	</div>

@@ -17,6 +17,7 @@ if (isset($_POST['autorization-btn'])) {
 					//echo "<br> пароли совпадают";
 					$_SESSION['user']['name'] = $user[0]['name'];
 					$_SESSION['user']['id_user'] = $user[0]['id_user'];
+					$_SESSION['user']['isAdmin'] = $user[0]['isAdmin'];
 					$isEntry = true;
 					$error = '';
 				} else {
