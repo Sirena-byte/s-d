@@ -104,6 +104,7 @@ function handleRequestAddLinkToApp($err, $data)
 			try {
 
 				addLinkToApp($data); // Передаем ID в функцию добавления пользователя
+				$dataChange['id_status'] = 2;
 				$dataChange['id_app'] = $data['id_app'];
 				changeStatusApp($dataChange);
 

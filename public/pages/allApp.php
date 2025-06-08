@@ -3,7 +3,7 @@
 	?>
 
 	<head>
-
+		<meta http-equiv="refresh" content="180">
 		<link rel="stylesheet" type="text/css" href="src/css/forms.css">
 		<link rel="stylesheet" type="text/css" href="src/css/table.css">
 		<link rel="stylesheet" type="text/css" href="src/css/allstyle.css">
@@ -11,6 +11,13 @@
 
 	</head>
 	<div class="content ">
+		<!-- Форма для поиска -->
+<form method="POST">
+    <input type="text" name="search" placeholder="Введите запрос...">
+    <button type="submit">Поиск</button>
+	  <button type="submit" name="reset" value="Сброс">Сброс</button>
+</form>
+
 		<div class="edit-user-form">
 			<div class="block-content all-app">
 				<table>
@@ -18,7 +25,6 @@
 						<tr>
 							<th>номер заявки</th>
 							<th>тема заявки</th>
-							<th>ид статуса</th>
 							<th>статус</th>
 							<th>инициатор запроса</th>
 							<th>назначен специалист</th>
@@ -30,7 +36,7 @@
 						foreach ($apps as $app): ?>
 							<tr>
 								<?php foreach ($app as $item): ?>
-									<td><a class="a-table" href="?page=application&id=<?= $app['id_app']; ?>" target="_blank"><?=$item ?></a></td>
+									<td><a class="a-table" href="?page=application&id=<?= $app['id_app']; ?>" target="_blank"><?= $item ?></a></td>
 								<?php endforeach; ?>
 							</tr>
 						<?php endforeach; ?>

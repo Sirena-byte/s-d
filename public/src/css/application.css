@@ -71,10 +71,11 @@
 }
 
 .content-config fieldset {
-	background: #f8d9d9;
+	background: #c9bfbf;
 }
 .executor-info fieldset{
-	background: #c9bfbf;
+	
+	background: #f8d9d9;
 }
 .executor-info button {
 	margin-top: 10px;
@@ -140,7 +141,6 @@
 .init-user{
 	
 	background-color: #c9bfbf;
-margin-left: 13%;
 }
 
 img{

@@ -35,27 +35,14 @@ require_once('model/m_autorization.php'); ?>
 						<?php if ($_SESSION['user']['isAdmin'] == 1) : ?>
 							<li><a href="?page=allApp">Все заявки</a></li>
 							<li><a href="?page=allApp">Статистика</a></li>
-							<?php endif; ?>
-						<?php if($_SESSION['user']['isAdmin'] == 0) : ?>
+						<?php endif; ?>
+						<?php if ($_SESSION['user']['isAdmin'] == 0) : ?>
 							<li><a href="?page=addApp">Создать</a></li>
 						<?php endif; ?>
-						
+
 					</ul>
 				</li>
-				<li class="item">пункт 2
-					<ul class="sub-sub-item">
-						<li>пункт 2-1</li>
-						<li>пункт 2-2</li>
-						<li>пункт 2-3</li>
-					</ul>
-				</li>
-				<li class="item">пункт 3
-					<ul class="sub-sub-item">
-						<li>пункт 3-1</li>
-						<li>пункт 3-2</li>
-						<li>пункт 3-3</li>
-					</ul>
-				</li>
+
 			</ul>
 		</li>
 		<li class="item-menu dropdown">
@@ -96,8 +83,11 @@ require_once('model/m_autorization.php'); ?>
 			</div>
 			<ul class="sub-item">
 				<li class="item"><a href="?page=autorization">Выйти</a></li>
-				<li class="item">Настройки</li>
+				<li class="item">Мои заявки</li>
+				<li class="item">Назначенные мне заявки</li>
 			</ul>
+
+
 		</li>
 	</ul>
 </div>
